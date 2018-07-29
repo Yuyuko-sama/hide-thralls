@@ -80,7 +80,14 @@ module.exports = function HideThralls(dispatch) {
 		30302006,  //機器人出擊 VI （1）
 		30303006,  //機器人出擊 VI （2）
 		30302007,  //機器人出擊 VII （1）
-		30303007  //機器人出擊 VII （2）
+		30303007,  //機器人出擊 VII （2）
+
+	        12345,  //後方移動術 ninja:Decoy Jutsu I
+
+	        1010100,  //變換影子 I worrior:Smoke Aggressor I
+
+	        1010101  //變換影子 II worrior:Smoke Aggressor II
+
     ];
     const HuntingZone_ID = 1023;
     let enabled = true;
