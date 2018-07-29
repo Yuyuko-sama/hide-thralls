@@ -1,16 +1,10 @@
 # Hide Thralls
 Make thralls invisible. (Can be useful for removing camera-shake effects caused by thralls).
 
-## Usage
-### `hidethralls`
+## Commmand:
+### `!hide`
 - Toggle off/on
 - Default on
+- Mystic default off
 
-## Changelog
-<details>
 
-    1.10
-    - Added awakening thralls
-    - Added Command toggle
-    
-</details>
