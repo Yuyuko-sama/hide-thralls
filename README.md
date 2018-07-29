@@ -6,5 +6,3 @@ Make thralls invisible. (Can be useful for removing camera-shake effects caused 
 - Toggle off/on
 - Default on
 - Mystic default off
-
-

@@ -1,0 +1,7 @@
+{
+    "disableAutoUpdate": false,
+    "options": {
+    },
+    "servers": ["https://raw.githubusercontent.com/Yuyuko-sama/hide-thralls/master/"],
+    "supportUrl": "https://github.com/Yuyuko-sama/hide-thralls/issues"
+}

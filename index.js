@@ -2,9 +2,9 @@ const Command = require('command');
 const BLOCKED_CLASSES = ['elementalist']//, 'priest'
 
 module.exports = function HideThralls(dispatch) {
-
+    
     const Thrall_IDs = [
-                10235014, //精靈召喚：守護精靈 I  mystic:protection
+        10235014, //精靈召喚：守護精靈 I  mystic:protection
 		10235015, //精靈召喚：守護精靈 II （1）
 		10235017, //精靈召喚：守護精靈 II （2）
 		10235016, //精靈召喚：守護精靈 III
@@ -35,7 +35,7 @@ module.exports = function HideThralls(dispatch) {
 		10236014, //精靈召喚：生命精靈 XIII （2）
 		10236015, //精靈召喚：生命精靈 XIV
 
-                10237003, //召喚精靈：閃電精靈 I mystic:vengeance
+        10237003, //召喚精靈：閃電精靈 I mystic:vengeance
 		10237004, //召喚精靈：閃電精靈 II （1）
 		10237015, //召喚精靈：閃電精靈 II （2）
 		10237005, //召喚精靈：閃電精靈 III
@@ -50,7 +50,7 @@ module.exports = function HideThralls(dispatch) {
 		10237014, //召喚精靈：閃電精靈 XII
 		10237015, //召喚精靈：閃電精靈 XV
 
-                10238001, //召喚精靈：破壞精靈 I mystic:wrath
+        10238001, //召喚精靈：破壞精靈 I mystic:wrath
 		10238002, //召喚精靈：破壞精靈 II （1）
 		10238008, //召喚精靈：破壞精靈 II （2）
 		10238003, //召喚精靈：破壞精靈 III
@@ -60,7 +60,7 @@ module.exports = function HideThralls(dispatch) {
 		10238007, //召喚精靈：破壞精靈 VII
 		10238008, //召喚精靈：破壞精靈 VIII
 
-                10239003,  //召喚元素王 mystic:lord
+        10239003,  //召喚元素王 mystic:lord
 
 		30301001,  //設置哨兵塔 I gunner:sentry gun
 		30301002,  //設置哨兵塔 II
@@ -80,18 +80,11 @@ module.exports = function HideThralls(dispatch) {
 		30302006,  //機器人出擊 VI （1）
 		30303006,  //機器人出擊 VI （2）
 		30302007,  //機器人出擊 VII （1）
-		30303007,  //機器人出擊 VII （2）
-
-	        12345,  //後方移動術 ninja:Decoy Jutsu I
-
-	        1010100,  //變換影子 I worrior:Smoke Aggressor I
-
-	        1010101  //變換影子 II worrior:Smoke Aggressor II
-
+		30303007  //機器人出擊 VII （2）
     ];
-    const HuntingZone_ID = ['1023','110','111','112','113','114','115','116','117','118','110'];
+    const HuntingZone_ID = 1023;
     let enabled = true;
-
+    
     dispatch.hook('S_SPAWN_NPC', 8, (event) => {
         if (!enabled || BLOCKED_CLASSES.includes(dispatch.game.me.class)) return;
         if (Thrall_IDs.includes(event.templateId) && event.huntingZoneId == HuntingZone_ID) {
