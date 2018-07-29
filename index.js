@@ -89,7 +89,7 @@ module.exports = function HideThralls(dispatch) {
 	        1010101  //變換影子 II worrior:Smoke Aggressor II
 
     ];
-    const HuntingZone_ID = 1023;
+    const HuntingZone_ID = ['1023','110','111','112','113','114','115','116','117','118','110'];
     let enabled = true;
     
     dispatch.hook('S_SPAWN_NPC', 8, (event) => {
