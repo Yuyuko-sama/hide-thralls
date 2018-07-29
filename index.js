@@ -93,8 +93,8 @@ module.exports = function HideThralls(dispatch) {
     let enabled = true;
 
     dispatch.hook('S_SPAWN_NPC', 8, (event) => {
-        if (!enabled || BLOCKED_CLASSES.includes(dispatch.game.me.class)) return;
-        if (Thrall_IDs.includes(event.templateId) && event.huntingZoneId == HuntingZone_ID) {
+        if (!enabled) return;
+        if (Thrall_IDs.includes(event.templateId) && event.huntingZoneId == HuntingZone_ID && BLOCKED_CLASSES.includes(dispatch.game.me.class)) {
             return false;
         }
     })
