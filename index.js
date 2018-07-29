@@ -1,5 +1,4 @@
 const Command = require('command');
-const BLOCKED_CLASSES = ['elementalist']//, 'priest'
 
 module.exports = function HideThralls(dispatch) {
 
@@ -89,14 +88,14 @@ module.exports = function HideThralls(dispatch) {
 	        1010101  //變換影子 II worrior:Smoke Aggressor II
 
     ];
-    const HuntingZone_ID = ['1023','110','111','112','113','114','115','116','117','118','110'];
+	const BLOCKED_CLASSES = ['elementalist'];//, 'priest'
+    const HuntingZone_ID = 1023;
+	const BlockHuntingZone_ID = [110, 111, 112 , 113 , 114 , 115 , 116 , 117 , 118 , 110];
     let enabled = true;
 
     dispatch.hook('S_SPAWN_NPC', 8, (event) => {
-        if (!enabled) return;
-        if (Thrall_IDs.includes(event.templateId) && event.huntingZoneId == HuntingZone_ID && BLOCKED_CLASSES.includes(dispatch.game.me.class)) {
-            return false;
-        }
+        if (!enabled || BLOCKED_CLASSES.includes(dispatch.game.me.class) || BlockHuntingZone_ID.includes(event.huntingZoneId) || BLOCKED_CLASSES.includes(dispatch.game.me.class)) return;
+        if (Thrall_IDs.includes(event.templateId) && event.huntingZoneId == HuntingZone_ID) return false;
     })
 
     const command = Command(dispatch);
