@@ -2,7 +2,7 @@ const Command = require('command');
 const BLOCKED_CLASSES = ['elementalist']//, 'priest'
 
 module.exports = function HideThralls(dispatch) {
-    
+
     const Thrall_IDs = [
                 10235014, //精靈召喚：守護精靈 I  mystic:protection
 		10235015, //精靈召喚：守護精靈 II （1）
@@ -91,7 +91,7 @@ module.exports = function HideThralls(dispatch) {
     ];
     const HuntingZone_ID = ['1023','110','111','112','113','114','115','116','117','118','110'];
     let enabled = true;
-    
+
     dispatch.hook('S_SPAWN_NPC', 8, (event) => {
         if (!enabled || BLOCKED_CLASSES.includes(dispatch.game.me.class)) return;
         if (Thrall_IDs.includes(event.templateId) && event.huntingZoneId == HuntingZone_ID) {
