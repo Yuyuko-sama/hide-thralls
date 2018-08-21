@@ -1,6 +1,6 @@
-const Command = require('command');
+'use strict'
 
-module.exports = function HideThralls(dispatch) {
+module.exports = function HideThralls(mod) {
 
     const Thrall_IDs = [
                 10235014, //精靈召喚：守護精靈 I  mystic:protection
@@ -93,14 +93,14 @@ module.exports = function HideThralls(dispatch) {
 	const BlockHuntingZone_ID = [110, 111, 112 , 113 , 114 , 115 , 116 , 117 , 118 , 110];
     let enabled = true;
 
-    dispatch.hook('S_SPAWN_NPC', 8, (event) => {
-        if (!enabled || BLOCKED_CLASSES.includes(dispatch.game.me.class) || BlockHuntingZone_ID.includes(event.huntingZoneId) || BLOCKED_CLASSES.includes(dispatch.game.me.class)) return;
+    mod.hook('S_SPAWN_NPC', 8, (event) => {
+        if (!enabled || BLOCKED_CLASSES.includes(mod.game.me.class) || BlockHuntingZone_ID.includes(event.huntingZoneId) || BLOCKED_CLASSES.includes(mod.game.me.class)) return;
         if (Thrall_IDs.includes(event.templateId) && event.huntingZoneId == HuntingZone_ID) return false;
     })
 
-    const command = Command(dispatch);
-    command.add('!hide', ()=> {
+    const mod.command = mod.command(mod);
+    mod.command.add('!hide', ()=> {
         enabled = !enabled;
-        command.message('(hide-thralls) ' + (enabled ? 'enabled' : 'disabled'));
+        mod.command.message('(hide-thralls) ' + (enabled ? 'enabled' : 'disabled'));
     });
 }
