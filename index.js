@@ -98,7 +98,6 @@ module.exports = function HideThralls(mod) {
         if (Thrall_IDs.includes(event.templateId) && event.huntingZoneId == HuntingZone_ID) return false;
     })
 
-    const mod.command = mod.command(mod);
     mod.command.add('!hide', ()=> {
         enabled = !enabled;
         mod.command.message('(hide-thralls) ' + (enabled ? 'enabled' : 'disabled'));
