@@ -1,11 +1,10 @@
 {
 	"files": {
-		"README.md": "c87ec7d8cab99eef34d1840395b2608e442bf6120eea4063d34e8a38a0ff7518",
-		"index.js": "038151068e3fcaae21403a6ad092143f5675b331b189198603dd6016ce124f75",
-		"module.json": "28f59107d0aba58a20c435c5af9ae301c9d6b9f53594b3f17774c2b79b8c8a04"
+		"README.md": "46b220268ab1cb18b1c93a84dfad6e2a2086fabbdebd6d98bc388538a26d780d",
+		"index.js": "499616d0e8a1ffa471f4378463bb48bc4b1e1555f6397406482a41a54c791d6e",
+		"module.json": "0cfd7bc08f5d65642c68c3a36896577ceb0f84be895e546517a237019aa5abc9"
 	},
 	"defs": {
-		"S_PARTY_INFO": 1,
-		"S_PARTY_MEMBER_LIST": 7
+		"S_SPAWN_NPC": 8
 	}
 }
