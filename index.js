@@ -18,7 +18,7 @@ module.exports = function HideThralls(mod) {
 		10235011, //精靈召喚：守護精靈 XI
 		10235012, //精靈召喚：守護精靈 XII
 		10235013, //精靈召喚：守護精靈 XIII
-
+		
 		10236001, //精靈召喚：生命精靈 I  mystic:life
 		10236002, //精靈召喚：生命精靈 II
 		10236003, //精靈召喚：生命精靈 III
@@ -34,8 +34,8 @@ module.exports = function HideThralls(mod) {
 		10236013, //精靈召喚：生命精靈 XIII （1）
 		10236014, //精靈召喚：生命精靈 XIII （2）
 		10236015, //精靈召喚：生命精靈 XIV
-
-                10237003, //召喚精靈：閃電精靈 I mystic:vengeance
+		
+		10237003, //召喚精靈：閃電精靈 I mystic:vengeance
 		10237004, //召喚精靈：閃電精靈 II （1）
 		10237015, //召喚精靈：閃電精靈 II （2）
 		10237005, //召喚精靈：閃電精靈 III
@@ -49,8 +49,8 @@ module.exports = function HideThralls(mod) {
 		10237013, //召喚精靈：閃電精靈 XI
 		10237014, //召喚精靈：閃電精靈 XII
 		10237015, //召喚精靈：閃電精靈 XV
-
-                10238001, //召喚精靈：破壞精靈 I mystic:wrath
+		
+		10238001, //召喚精靈：破壞精靈 I mystic:wrath
 		10238002, //召喚精靈：破壞精靈 II （1）
 		10238008, //召喚精靈：破壞精靈 II （2）
 		10238003, //召喚精靈：破壞精靈 III
@@ -59,40 +59,33 @@ module.exports = function HideThralls(mod) {
 		10238006, //召喚精靈：破壞精靈 VI
 		10238007, //召喚精靈：破壞精靈 VII
 		10238008, //召喚精靈：破壞精靈 VIII
-
-                10239003,  //召喚元素王 mystic:lord
-
+		
+		10239003,  //召喚元素王 mystic:lord
+		
 		30301001,  //設置哨兵塔 I gunner:sentry gun
 		30301002,  //設置哨兵塔 II
 		30301003,  //設置哨兵塔 III
 		30301004,  //設置哨兵塔 IV
-
-		30302001,  //機器人出擊 I（1） gunner:robot
-		30303001,  //機器人出擊 I （2）
-		30302002,  //機器人出擊 II （1）
-		30303002,  //機器人出擊 II （2）
-		30302003,  //機器人出擊 III （1）
-		30303003,  //機器人出擊 III （2）
-		30302004,  //機器人出擊 IV （1）
-		30303004,  //機器人出擊 IV （2）
-		30302005,  //機器人出擊 V （1）
-		30303005,  //機器人出擊 V （2）
-		30302006,  //機器人出擊 VI （1）
-		30303006,  //機器人出擊 VI （2）
-		30302007,  //機器人出擊 VII （1）
-		30303007,  //機器人出擊 VII （2）
-
-	        12345,  //後方移動術 ninja:Decoy Jutsu I
 		
-	        2010100,  //變換影子 I worrior:Smoke Flanker I
-	        2010101, //變換影子 II worrior:Smoke Flanker II
+		30302001,  //機器人出擊 I（1）（2） gunner:robot
+		30302002,  //機器人出擊 II （1）（2）
+		30302003,  //機器人出擊 III （1）（2）
+		30302004,  //機器人出擊 IV （1）（2）
+		30302005,  //機器人出擊 V （1）（2）
+		30302006,  //機器人出擊 VI （1）（2）
+		30302007,  //機器人出擊 VII （1）（2）
+		
+	    12345,  //後方移動術 ninja:Decoy Jutsu I
+		
+		2010100,  //變換影子 I worrior:Smoke Flanker I
+		2010101, //變換影子 II worrior:Smoke Flanker II
 		
 		1010100, //影分身 I worrior:Smoke Aggressor II
 		1010101 //影分身 II worrior:Smoke Aggressor II
 
     ];
 	const BLOCKED_CLASSES = ['elementalist'];//, 'priest'
-        const HuntingZone_ID = 1023;
+    const HuntingZone_ID = 1023;
 	const BlockHuntingZone_ID = [110, 111, 112 , 113 , 114 , 115 , 116 , 117 , 118 , 110];
     let enabled = true;
 
