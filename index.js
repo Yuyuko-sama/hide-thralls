@@ -75,7 +75,7 @@ module.exports = function HideThralls(mod) {
 		30302006,  //機器人出擊 VI （1）（2）
 		30302007,  //機器人出擊 VII （1）（2）
 		
-	    12345,  //後方移動術 ninja:Decoy Jutsu I
+		12345,  //後方移動術 ninja:Decoy Jutsu I
 		
 		2010100,  //變換影子 I worrior:Smoke Flanker I
 		2010101, //變換影子 II worrior:Smoke Flanker II
