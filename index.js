@@ -67,13 +67,20 @@
  		30301003,  //設置哨兵塔 III
  		30301004,  //設置哨兵塔 IV
  		
- 		30302001,  //機器人出擊 I（1）（2） gunner:robot
- 		30302002,  //機器人出擊 II （1）（2）
- 		30302003,  //機器人出擊 III （1）（2）
- 		30302004,  //機器人出擊 IV （1）（2）
- 		30302005,  //機器人出擊 V （1）（2）
- 		30302006,  //機器人出擊 VI （1）（2）
- 		30302007,  //機器人出擊 VII （1）（2）
+ 		30302001,  //機器人出擊 I（1） gunner:robot
+ 		30303001,  //機器人出擊 I （2）
+ 		30302002,  //機器人出擊 II （1）
+ 		30303002,  //機器人出擊 II （2）
+ 		30302003,  //機器人出擊 III （1）
+ 		30303003,  //機器人出擊 III （2）
+ 		30302004,  //機器人出擊 IV （1）
+ 		30303004,  //機器人出擊 IV （2）
+ 		30302005,  //機器人出擊 V （1）
+ 		30303005,  //機器人出擊 V （2）
+		30302006,  //機器人出擊 VI （1）
+		30303006,  //機器人出擊 VI （2）
+		30302007,  //機器人出擊 VII （1）
+		30303007,  //機器人出擊 VII （2）
  		
  		12345,  //後方移動術 ninja:Decoy Jutsu I
  		
@@ -89,7 +96,7 @@
 	let enabled = true;
      
 	 mod.hook('S_SPAWN_NPC', 9, (event) => {
-        if (!enabled || BLOCKED_CLASSES.includes(mod.game.me.class) || BlockHuntingZone_ID.includes(event.huntingZoneId)) return;
+        if (!enabled || BLOCKED_CLASSES.includes(mod.game.me.class) || BlockHuntingZone_ID.includes(mod.game.me.zone)) return;
 		if (Thrall_IDs.includes(event.templateId) && event.huntingZoneId == HuntingZone_ID) return false;
      })
 
