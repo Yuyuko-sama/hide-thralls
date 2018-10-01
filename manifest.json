@@ -5,6 +5,6 @@
 		"module.json": "0cfd7bc08f5d65642c68c3a36896577ceb0f84be895e546517a237019aa5abc9"
 	},
 	"defs": {
-		"S_SPAWN_NPC": [8,9]
+		"S_SPAWN_NPC": 9
 	}
 }
