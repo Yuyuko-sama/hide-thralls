@@ -95,7 +95,7 @@
 	const BlockHuntingZone_ID = [110, 111, 112 , 113 , 114 , 115 , 116 , 117 , 118 , 110];
 	let enabled = true;
      
-	 mod.hook('S_SPAWN_NPC', 10, (event) => {
+	 mod.hook('S_SPAWN_NPC', 11, (event) => {
         if (!enabled || BLOCKED_CLASSES.includes(mod.game.me.class) || BlockHuntingZone_ID.includes(mod.game.me.zone)) return;
 		if (Thrall_IDs.includes(event.templateId) && event.huntingZoneId == HuntingZone_ID) return false;
      })
